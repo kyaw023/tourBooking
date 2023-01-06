@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active{
+    @apply block 
+}
+.drop-mega-item {
+    @apply xl:invisible xl:opacity-0
+}
+.drop-mega:hover .drop-mega-item{
+    @apply xl:visible xl:opacity-100 xl:translate-y-1
+   
+}
+.active-list{
+    @apply -left-0 
+}
+.sec-drop-mega-item{
+    @apply xl:invisible xl:opacity-0
+}
+.sec-drop-mega:hover .sec-drop-mega-item{
+    @apply xl:visible xl:opacity-100
+}
+.activetab i{
+    @apply transition duration-200;transform:rotate(-180deg)
+}
+.activetab .active-item{ 
+    @apply block 
+}
+
+.active-tab .drop-active{
+    @apply block
+}
+.
+.active .drop-active-two{
+    @apply block
+}

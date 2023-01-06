@@ -1,0 +1,1081 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Primary Meta Tags -->
+  <title>Tour-Booking-project</title>
+  <meta name="title" content="Tour-Booking-project">
+  <meta name="description" content="tour-booking-project">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://metatags.io/">
+  <meta property="og:title" content="Tour-Booking-project">
+  <meta property="og:description" content="tour-booking-project">
+  <meta property="og:image" content="/assets/img/thumbnail.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://metatags.io/">
+  <meta property="twitter:title" content="Tour-Booking-project">
+  <meta property="twitter:description" content="tour-booking-project">
+  <meta property="twitter:image" content="/assets/img/thumbnail.png">
+  <link rel="stylesheet" href="/dist/output.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;500;700&family=Hanken+Grotesk:wght@200;300;400;500;600;700;800;900&family=Lora:ital@0;1&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400&family=Parisienne&family=Playfair+Display&family=Quicksand:wght@300;400;600;700&family=Red+Hat+Display:wght@300;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&family=Rubik:wght@300;500;700;900&family=Silkscreen:wght@400;700&family=Slabo+27px&family=Source+Sans+Pro:ital,wght@0,200;0,600;1,200&family=Work+Sans:wght@100;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
+</head>
+<style>
+  *{
+    font-family: 'Hanken Grotesk', sans-serif;
+  }
+    .flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange, .flatpickr-day.selected.inRange, .flatpickr-day.startRange.inRange, .flatpickr-day.endRange.inRange, .flatpickr-day.selected:focus, .flatpickr-day.startRange:focus, .flatpickr-day.endRange:focus, .flatpickr-day.selected:hover, .flatpickr-day.startRange:hover, .flatpickr-day.endRange:hover, .flatpickr-day.selected.prevMonthDay, .flatpickr-day.startRange.prevMonthDay, .flatpickr-day.endRange.prevMonthDay, .flatpickr-day.selected.nextMonthDay, .flatpickr-day.startRange.nextMonthDay, .flatpickr-day.endRange.nextMonthDay {
+    background:#5143d9;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #fff;
+    
+  }
+  .flatpickr-calendar {
+  background: transparent;
+  opacity: 0;
+  display: none;
+  text-align: center;
+  visibility: hidden;
+  padding: 0;
+  -webkit-animation: none;
+  animation: none;
+  direction: ltr;
+  border: 1px solid #584ed9;
+  font-size: 14px;
+  line-height: 24px;
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  position: absolute;
+  width: 307.875px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  background: #fff;
+  -webkit-box-shadow: 1px 0 0 #e6e6e6,-1px 0 0 #e6e6e6,0 1px 0 #e6e6e6,0 -1px 0 #e6e6e6,0 3px 13px rgba(0,0,0,0.08);
+  box-shadow: 1px 0 0 #e6e6e6,-1px 0 0 #e6e6e6,0 1px 0 #e6e6e6,0 -1px 0 #e6e6e6,0 3px 13px rgba(0,0,0,0.08);
+  border: 1pxs solid;
+}
+</style>
+<body class=" dark:bg-[#222529]">
+  
+     <!-- navbar -->
+      <div class="px-3 xl:px-28 mb-10 nav-ani z-10 animate__animated ">
+            <!-- nav -->
+            <div class="py-3 flex items-center justify-between container mx-auto ">
+                   <!-- logo and menu list -->
+                   <div class=" flex items-center space-x-5">
+
+                      <svg class="" xmlns="http://www.w3.org/2000/svg" width="150" height="" viewBox="0 0 593.906 183">
+                        <defs>
+                          <style>
+                            .cls-1 {
+                              fill: #5143d9;
+                            }
+                      
+                            .cls-1, .cls-2, .cls-3 {
+                              fill-rule: evenodd;
+                            }
+                      
+                            .cls-2 {
+                              fill: #fff;
+                            }
+                      
+                            .cls-3 {
+                              fill: #0b0a12;
+                            }
+                          </style>
+                        </defs>
+                        <path  class="cls-1" d="M188,95.5A91.5,91.5,0,1,1,96.5,4,91.5,91.5,0,0,1,188,95.5Z" transform="translate(-5 -4)"/>
+                        <path class="cls-2" d="M155.286,95.6l2.191-2.195a1.655,1.655,0,1,0-2.339-2.343l-0.181.181-0.7-9.327,2.2-2.206a1.655,1.655,0,1,0-2.339-2.343l-0.192.192-0.833-11.044c6.042-5.71,10.829-10.255,11.912-11.34,4.282-4.29,2.932-10.791,2.273-11.45s-7.148-2.013-11.43,2.277c-1.083,1.085-5.62,5.88-11.32,11.933L133.5,57.1l0.192-.192a1.655,1.655,0,0,0-2.339-2.343l-2.2,2.206-9.31-.7,0.181-.181a1.655,1.655,0,0,0-2.339-2.343l-2.191,2.195L101.1,54.649l-3.228,3.234,26.286,7.59,7.539,6.113c-6.748,8.076-17.355,20.286-17.355,20.286l-14.263-1.683L97.9,92.366,108.182,98.7a2.384,2.384,0,0,0-.725,2.31c-1.976,1.98-1.12,3.762-1.12,3.762s1.779,0.858,3.756-1.122a2.372,2.372,0,0,0,2.3-.726l6.325,10.3,2.174-2.178-1.68-14.289s12.188-10.625,20.25-17.385l6.1,7.552,7.576,26.333,3.229-3.234ZM76.053,128.979c-4.932,3.458-9.955,6.758-15.072,9.839a170.777,170.777,0,0,1-15.63,8.419c-2.647,1.238-5.316,2.37-7.983,3.348a56.035,56.035,0,0,1-7.9,2.309,26.285,26.285,0,0,1-3.684.5,12.123,12.123,0,0,1-3.016-.149,4.517,4.517,0,0,1-.944-0.307,0.833,0.833,0,0,1-.355-0.3,0.1,0.1,0,0,1,.086-0.129,0.131,0.131,0,0,0,.114-0.125c0.025-.158-0.024-0.7.057-1.49,0.031-.31.082-0.658,0.145-1.022A78.919,78.919,0,0,1,11.25,127.661c-0.943,2.294-1.821,4.648-2.611,7.085a56.872,56.872,0,0,0-2.406,10.529,31.559,31.559,0,0,0-.151,6.2,21.625,21.625,0,0,0,.579,3.533,17.131,17.131,0,0,0,1.42,3.8,14.773,14.773,0,0,0,6.237,6.345,16.253,16.253,0,0,0,3.84,1.407,19.692,19.692,0,0,0,3.531.437,26.18,26.18,0,0,0,6.038-.581,39.668,39.668,0,0,0,5.178-1.467A67.877,67.877,0,0,0,42,160.877c2.853-1.521,5.578-3.157,8.222-4.871A179.48,179.48,0,0,0,65.29,144.982c4.8-3.881,9.427-7.931,13.913-12.1a349.491,349.491,0,0,0,25.375-26.344A346.793,346.793,0,0,1,76.053,128.979Z" transform="translate(-5 -4)"/>
+                        <path id="Booking" class="cls-3" d="M250.9,128q11,0,17-5.4a17.625,17.625,0,0,0,6-13.7,16.9,16.9,0,0,0-3.9-11.05,16.694,16.694,0,0,0-9.9-5.95,17.7,17.7,0,0,0,8.65-5.35Q272.3,82.6,272.3,76a16.459,16.459,0,0,0-5.75-12.95Q260.8,58,249.9,58H221.8v70h29.1ZM234.6,68.3h13.2q5.7,0,8.55,2.55a8.855,8.855,0,0,1,2.85,6.95,8.865,8.865,0,0,1-2.9,7.1q-2.9,2.5-8.3,2.5H234.6V68.3Zm0,28.7h14.1q5.6,0,8.9,2.8a9.562,9.562,0,0,1,3.3,7.7,9.2,9.2,0,0,1-3.15,7.45q-3.15,2.65-8.85,2.65H234.6V97Zm86.9,28.9a24.145,24.145,0,0,0,9.15-9.15A26.8,26.8,0,0,0,334,103.2a26.8,26.8,0,0,0-3.35-13.55,24.25,24.25,0,0,0-9.1-9.15,26.863,26.863,0,0,0-25.8,0,24.572,24.572,0,0,0-9.15,9.15,26.462,26.462,0,0,0-3.4,13.55,26.767,26.767,0,0,0,3.35,13.55,24.207,24.207,0,0,0,9.1,9.15A26.961,26.961,0,0,0,321.5,125.9Zm-21.55-11.55q-3.652-3.75-3.65-11.15t3.65-11.15a11.909,11.909,0,0,1,17.35,0Q321,95.8,321,103.2t-3.7,11.15a11.834,11.834,0,0,1-8.7,3.75A11.664,11.664,0,0,1,299.95,114.349ZM382.3,125.9a24.131,24.131,0,0,0,9.15-9.15,26.787,26.787,0,0,0,3.35-13.55,26.79,26.79,0,0,0-3.35-13.55,24.235,24.235,0,0,0-9.1-9.15,26.863,26.863,0,0,0-25.8,0,24.586,24.586,0,0,0-9.15,9.15A26.472,26.472,0,0,0,344,103.2a26.777,26.777,0,0,0,3.35,13.55,24.221,24.221,0,0,0,9.1,9.15A26.961,26.961,0,0,0,382.3,125.9Zm-21.55-11.55q-3.651-3.75-3.65-11.15t3.65-11.15a11.909,11.909,0,0,1,17.35,0q3.7,3.75,3.7,11.15t-3.7,11.15a11.831,11.831,0,0,1-8.7,3.75A11.667,11.667,0,0,1,360.748,114.349ZM419.2,128V103.1L439.3,128h16l-23.6-27L452,78.4H436.8L419.2,98.5V56H406.4v72h12.8Zm56.85-59.4a6.938,6.938,0,0,0,2.25-5.3,6.786,6.786,0,0,0-2.25-5.25,9.09,9.09,0,0,0-11.5,0,6.786,6.786,0,0,0-2.25,5.25,6.938,6.938,0,0,0,2.25,5.3A8.923,8.923,0,0,0,476.047,68.6ZM476.7,128V78.4H463.9V128h12.8Zm26.4,0V102.4q0-6.8,3.45-10.6A11.417,11.417,0,0,1,515.4,88q5.5,0,8.1,3.4t2.6,9.8V128h12.8V100q0-11.2-5.1-17t-14.3-5.8a19.606,19.606,0,0,0-10.25,2.6,17.447,17.447,0,0,0-6.65,7l-1-8.4H490.3V128h12.8Zm79.949-17.2a17.035,17.035,0,0,0,6.95-6.5,18.541,18.541,0,0,0,.4-17.5l8.5-.6V78.4H580.1a24.523,24.523,0,0,0-7.8-1.2,22.893,22.893,0,0,0-10.9,2.4A17.258,17.258,0,0,0,552,95.2a16.649,16.649,0,0,0,5.8,13.1l-8.7,9.2v2.3a18.1,18.1,0,0,0,2.55,2.1,21.868,21.868,0,0,0,3.45,1.9q-6.5,4.9-6.5,11.6a12.969,12.969,0,0,0,6.5,11.85q6.5,3.95,17.1,3.95,7.8,0,12.8-2.45a17.2,17.2,0,0,0,7.4-6.4,15.829,15.829,0,0,0,2.4-8.35q0-6.7-4.5-10.5t-14.4-4.7q-6.5-.6-9.4-1.2a17.672,17.672,0,0,1-4.6-1.5l3.7-3.7a26.717,26.717,0,0,0,6.7.8A22.739,22.739,0,0,0,583.045,110.8Zm-17.35-9.5a8.45,8.45,0,0,1,0-12,9.918,9.918,0,0,1,6.6-2.1,9.81,9.81,0,0,1,6.45,2.1,8.334,8.334,0,0,1,0,12,9.81,9.81,0,0,1-6.45,2.1A9.918,9.918,0,0,1,565.7,101.3Zm-4.15,28.9a11.442,11.442,0,0,1,4.15-3.5q3.5,0.6,7.6.9,5.8,0.4,7.75,2.2a5.869,5.869,0,0,1,1.95,4.5,5.989,5.989,0,0,1-3,5.25,14.089,14.089,0,0,1-7.8,1.95,17.692,17.692,0,0,1-8.45-1.85,5.954,5.954,0,0,1-3.45-5.55A7.005,7.005,0,0,1,561.545,130.2Z" transform="translate(-5 -4)"/>
+                      </svg>
+
+                      <!-- menu -->
+                      <div class="">
+                           <ul id="menu-open-slide" class="hidden lg:flex flex-col lg:flex-row items-center lg:space-x-5 space-x-0 lg:space-y-0 space-y-5 absolute lg:static top-16 bg-transparent shadow lg:shadow-none lg:w-auto  lg:left-auto md:right-auto  py-5 lg:py-0 left-0 right-0 px-5 lg:px-0 z-10 transition-all duration-500 w-full dark:bg-[#222529]">
+                                <!--listing  -->
+                                <div class="flex items-center relative group drop-mega transition-all duration-300">
+                                    <li class="phone-drop-tab  hover:text-[#584ed9] flex items-cente justify-between  lg:w-auto w-full dropdown-tab">
+                                        <span class="dark:text-slate-300">Listings</span>
+                                        <i class=" bx bx-chevron-down bx-sm dark:text-slate-300"></i>
+                                    </li>
+
+                                    <ul class=" drop-mega-item active-item absolute hidden xl:block border top-16 md:top-10 z-10 bg-white dark:bg-[#0b0a12] dark:border-[#0b0a12] shadow-md rounded w-72 px-5 py-3 space-y-3 transition-all duration-300">
+
+                                        <!-- hotel -->
+                                         <li class="sec-drop-mega group transition-all duration-1000 dropdown-main">
+                                              <ul class="flex items-center  justify-between relative hover:text-[#584ed9] ">
+                                                  <span class="font-semibold text-slate-500">Hotel</span>
+                                                  <i class=" bx bx-dots-horizontal bx-sm dark:text-slate-500"></i>
+                                              </ul>
+
+                                              <ul class="drop-active absolute md:left-72 top-60 md:top-auto left-20 hidden xl:block  bg-white dark:bg-[#0b0a12]  dark:border-[#0b0a12] shadow-xl rounded w-60 px-5 py-5 space-y-3 sec-drop-mega-item transition duration-300">
+                                                   <li class=" text-slate-400 font-medium">Hotel Home</li>
+                                                   <li class=" text-slate-400 font-medium">Hotel Chain</li>
+                                                   <li class=" text-slate-400 font-medium">Hotel Resort</li>
+                                                   <li class=" text-slate-400 font-medium">Hotel Grid</li>
+                                                   <li class=" text-slate-400 font-medium">Hotel List</li>
+                                                   <li class=" text-slate-400 font-medium">Hotel Deatil</li>
+                                                   <li class=" text-slate-400 font-medium">Room Detail</li>
+                                                   <li class=" text-slate-400 font-medium">Hotel Booking</li>
+                                                   
+                                              </ul>
+                                         </li>
+                                         
+                                        <!-- flight -->
+                                         <li class=" sec-drop-mega  group transition-all duration-1000 dropdown-main ">
+                                             <ul class="flex items-center  justify-between relative hover:text-[#584ed9]">
+                                                <span class="font-semibold text-slate-500">Flight</span>
+                                                <i class=" bx bx-dots-horizontal bx-sm dark:text-slate-500"></i>
+                                             </ul>
+                                             <ul class="drop-active absolute md:left-72 top-60 md:top-auto left-20 hidden xl:block  bg-white dark:bg-[#0b0a12] dark:border-[#0b0a12] shadow-md rounded w-60 px-5 py-5 space-y-3 sec-drop-mega-item transition duration-300 ">
+                                                <li class=" text-slate-400 font-medium">Flight Home</li>
+                                                <li class=" text-slate-400 font-medium">Flight List</li>
+                                                <li class=" text-slate-400 font-medium">Flight Detail</li>
+                                                <li class=" text-slate-400 font-medium">Flight Booking</li>
+                                             </ul>
+                                         </li>
+
+                                        <!-- tour -->
+                                         <li class=" sec-drop-mega  group transition-all duration-1000 dropdown-main">
+                                            <ul class="flex items-center  justify-between relative hover:text-[#584ed9]">
+                                              <span class="font-semibold text-slate-500">Tour</span>
+                                              <i class=" bx bx-dots-horizontal bx-sm dark:text-slate-500"></i>
+                                            </ul>
+                                            <ul class="drop-active absolute md:left-72 top-60 md:top-auto left-20  hidden xl:block  bg-white dark:bg-[#0b0a12] dark:border-[#0b0a12] shadow-md rounded w-60 px-5 py-5 space-y-3 sec-drop-mega-item transition duration-300">
+                                              <li class=" text-slate-400 font-medium">Tour Home</li>
+                                              <li class=" text-slate-400 font-medium">Tour Grid</li>
+                                              <li class=" text-slate-400 font-medium">Tour Detail</li>
+                                              <li class=" text-slate-400 font-medium">Tour Booking</li>
+                                            </ul>
+                                          </li>
+
+                                        <!-- cab -->
+                                         <li class=" sec-drop-mega  group transition-all duration-1000 dropdown-main">
+                                              <ul class="flex items-center  justify-between relative hover:text-[#584ed9]">
+                                                <span class="font-semibold text-slate-500">Cab</span>
+                                                <i class=" bx bx-dots-horizontal bx-sm dark:text-slate-500"></i>
+                                              </ul>
+                                              <ul class="drop-active absolute md:left-72 top-60 md:top-auto left-20  hidden xl:block bg-white dark:bg-[#0b0a12] dark:border-[#0b0a12] shadow-md rounded w-60 px-5 py-5 space-y-3 sec-drop-mega-item transition duration-300">
+                                                <li class=" text-slate-400 font-medium">Cab Home</li>
+                                                <li class=" text-slate-400 font-medium">Cab List</li>
+                                                <li class=" text-slate-400 font-medium">Cab Detail</li>
+                                                <li class=" text-slate-400 font-medium">Cab Booking</li>
+                                              </ul>
+                                         </li>
+
+                                         <!-- drectiory -->
+                                         <li class=" sec-drop-mega  group transition-all duration-1000 dropdown-main">
+                                            <ul class="flex items-center  justify-between relative hover:text-[#584ed9]">
+                                              <span class="font-semibold text-slate-500">Directory</span>
+                                              <i class=" bx bx-dots-horizontal bx-sm dark:text-slate-500"></i>
+                                            </ul>
+                                            <ul class="drop-active absolute md:left-72 top-60 md:top-auto left-20  hidden xl:block bg-white  dark:bg-[#0b0a12] dark:border-[#0b0a12] shadow-md rounded w-60 px-5 py-5 space-y-3 sec-drop-mega-item transition duration-300">
+                                              <li class=" text-slate-400 font-medium">Deirectory Home</li>
+                                              <li class=" text-slate-400 font-medium">Deirectory Detail</li>
+                                              
+                                            </ul>
+                                         </li>
+
+                                         <!-- add listing -->
+                                         <li class=" sec-drop-mega  group transition-all duration-1000 dropdown-main">
+                                            <ul class="flex items-center  justify-between relative hover:text-[#584ed9]">
+                                              <span class="font-semibold text-slate-500">Add Listing</span>
+                                              <i class=" bx bx-dots-horizontal bx-sm dark:text-slate-500"></i>
+                                            </ul>
+                                            <ul class="drop-active absolute md:left-72 top-60 md:top-auto left-20  hidden xl:block bg-white  dark:bg-[#0b0a12] dark:border-[#0b0a12] shadow-md rounded w-60 px-5 py-5 space-y-3 sec-drop-mega-item transition duration-300">
+                                              <li class=" text-slate-400 font-medium">Join us</li>
+                                              <li class=" text-slate-400 font-medium">Add Listing</li>
+                                              <li class=" text-slate-400 font-medium">Add Listing Minimal</li>
+                                              <li class=" text-slate-400 font-medium">Listing Added</li>
+                                            </ul>
+                                         </li>
+
+                                         <!-- hero -->
+                                         <li class=" sec-drop-mega  group transition-all duration-1000 dropdown-main">
+                                            <ul class="flex items-center  justify-between relative hover:text-[#584ed9]">
+                                              <span class="font-semibold text-slate-500">Hero</span>
+                                              <i class=" bx bx-dots-horizontal bx-sm dark:text-slate-500"></i>
+                                            </ul>
+                                            <ul class="drop-active absolute md:left-72 top-60 md:top-auto left-20  hidden xl:block bg-white dark:bg-[#0b0a12] dark:border-[#0b0a12] shadow-md rounded w-60 px-5 py-5 space-y-3 sec-drop-mega-item transition duration-300">
+                                              <li class=" text-slate-400 font-medium">Hero Inline Form</li>
+                                              <li class=" text-slate-400 font-medium">Hero Multiple Search</li>
+                                              <li class=" text-slate-400 font-medium">Hero Image Gallery</li>
+                                              <li class=" text-slate-400 font-medium">Hero Split</li>
+                                            </ul>
+                                         </li>
+
+                                         <li>
+                                            <span class="font-semibold text-slate-500">Booking Confirmed</span>
+                                         </li>
+
+                                          <li>
+                                            <span class="font-semibold text-slate-500">Comapare Listing</span>
+                                          </li>
+
+                                          <li>
+                                            <span class="font-semibold text-slate-500">Offer Detail</span>
+                                          </li>
+                                    </ul>
+
+                                </div>
+
+                                <!-- pages -->
+                                <ul class=" flex items-center relative group drop-mega transition-all duration-300">
+                                    <li class="phone-drop-tab hover:text-[#584ed9] flex items-center justify-between lg:w-auto w-full ">
+                                        <span class=" dark:text-slate-300">Pages</span>
+                                        <i class=" bx bx-chevron-down bx-sm dark:text-slate-300"></i>
+                                    </li>
+
+                                    <ul class=" z-10 hidden xl:block active-item drop-mega-item absolute border top-16 md:top-10  bg-white dark:bg-[#0b0a12] dark:border-[#0b0a12] shadow-md rounded w-72 px-5 py-3 space-y-3 transition-all duration-300">
+                                         <li><span class=" font-semibold text-slate-500"> Contact</span></li>
+                                         <li><span class=" font-semibold text-slate-500">Contact 2</span></li>
+                                         <li><span class=" font-semibold text-slate-500">Our Team</span></li>
+                                         <li class="sec-drop-mega group transition-all duration-1000 ">
+                                            <ul class="flex items-center  justify-between relative hover:text-[#584ed9] dropdown-main-two">
+                                                <span class="font-semibold text-slate-500">Authentication</span>
+                                                <i class=" bx bx-dots-horizontal bx-sm dark:text-slate-500"></i>
+                                            </ul>
+                                            <ul class="drop-active-two absolute md:left-72 top-60 md:top-auto left-20 xl:block hidden bg-white dark:bg-[#0b0a12] dark:border-[#0b0a12] shadow-md rounded w-60 px-5 py-5 space-y-3 sec-drop-mega-item transition-all duration-300">
+                                                <li class=" text-slate-400 font-medium">Sign in</li>
+                                                <li class=" text-slate-400 font-medium">Sign Up</li>
+                                                <li class=" text-slate-400 font-medium">Forget Password</li>
+                                                <li class=" text-slate-400 font-medium">Two factor authentication</li>
+                                            </ul>
+                                         </li>
+                                         <li class="sec-drop-mega group transition-all duration-1000 ">
+                                            <ul class="flex items-center  justify-between relative hover:text-[#584ed9] dropdown-main-two">
+                                                <span class="font-semibold text-slate-500">Blog</span>
+                                                <i class=" bx bx-dots-horizontal bx-sm dark:text-slate-500"></i>
+                                            </ul>
+                                            <ul class="drop-active-two absolute md:left-72 top-60 md:top-auto left-20 xl:block hidden bg-white dark:bg-[#0b0a12] dark:border-[#0b0a12] shadow-md rounded w-60 px-5 py-5 space-y-3 sec-drop-mega-item transition-all duration-300">
+                                                <li class=" text-slate-400 font-medium">BLog </li>
+                                                <li class=" text-slate-400 font-medium">Blog Detail</li>
+                                            </ul>
+                                         </li>
+                                          <li class="sec-drop-mega group transition-all duration-1000 ">
+                                            <ul class="flex items-center  justify-between relative hover:text-[#584ed9] dropdown-main-two">
+                                                <span class="font-semibold text-slate-500">Help</span>
+                                                <i class=" bx bx-dots-horizontal bx-sm dark:text-slate-500"></i>
+                                            </ul>
+                                            <ul class="drop-active-two absolute md:left-72 top-60 md:top-auto left-20 xl:block hidden bg-white dark:bg-[#0b0a12] dark:border-[#0b0a12] shadow-md rounded w-60 px-5 py-5 space-y-3 sec-drop-mega-item transition-all duration-300">
+                                                <li class=" text-slate-400 font-medium">Help Center</li>
+                                                <li class=" text-slate-400 font-medium">Help Detail</li>
+                                                <li class=" text-slate-400 font-medium">Privacy Policy</li>
+                                                <li class=" text-slate-400 font-medium">Terms of Service</li>
+                                            </ul>
+                                         </li>
+                                         <li><span class=" font-semibold text-slate-500">Pricing</span></li>
+                                         <li><span class=" font-semibold text-slate-500">FAQs</span></li>
+                                         <li><span class=" font-semibold text-slate-500">Error 404</span></li>
+                                         <li><span class=" font-semibold text-slate-500">Coming Soon</span></li>
+                                    </ul>
+                                    
+                                </ul>
+
+                                <!-- account -->
+                                <div class=" flex items-center relative group drop-mega transition-all duration-300">
+
+                                    <div class="phone-drop-tab hover:text-[#584ed9] flex items-center justify-between lg:w-auto w-full">
+                                        <span class="dark:text-slate-300">Acoounts</span>
+                                        <i class=" bx bx-chevron-down bx-sm dark:text-slate-300"></i>
+                                    </div>
+
+                                    <ul class=" z-10 drop-mega-item active-item absolute hidden xl:block border top-16 md:top-10  bg-white dark:bg-[#0b0a12] dark:border-[#0b0a12] shadow-md rounded w-72 px-5 py-3 space-y-3 transition-all duration-300">
+                                        <li class="sec-drop-mega group transition-all duration-1000">
+                                            <ul class="flex items-center  justify-between relative hover:text-[#584ed9] main-three transition-all duration-300">
+                                                <span class="font-semibold text-slate-500">User Profile</span>
+                                                <i class=" bx bx-dots-horizontal bx-sm dark:text-slate-500"></i>
+                                            </ul>
+                                            <ul class=" absolute md:left-72 top-28 md:top-auto left-20 hidden xl:block bg-white dark:bg-[#0b0a12] dark:border-[#0b0a12] shadow-md rounded w-60 px-5 py-5 space-y-3 sec-drop-mega-item transition-all duration-300">
+                                                <li class=" text-slate-400 font-medium">My Profile</li>
+                                                <li class=" text-slate-400 font-medium">My Bookings</li>
+                                                <li class=" text-slate-400 font-medium">Travelers</li>
+                                                <li class=" text-slate-400 font-medium">Payment Details</li>
+                                                <li class=" text-slate-400 font-medium">Wishlist</li>
+                                                <li class=" text-slate-400 font-medium">Settings</li>
+                                                <li class=" text-slate-400 font-medium">Delete Profile</li>
+                                            </ul>
+                                        </li>
+                                        <li class="sec-drop-mega group transition-all duration-1000">
+                                          <ul class="flex items-center  justify-between relative hover:text-[#584ed9] main-three">
+                                              <span class="font-semibold text-slate-500">Agent Dashboard</span>
+                                              <i class=" bx bx-dots-horizontal bx-sm dark:text-slate-500"></i>
+                                          </ul>
+                                          <ul class=" absolute md:left-72 top-28 md:top-auto  left-20 hidden xl:block bg-white dark:bg-[#0b0a12] dark:border-[#0b0a12] shadow-md rounded w-60 px-5 py-5 space-y-3 sec-drop-mega-item transition-all duration-300">
+                                              <li class=" text-slate-400 font-medium">Dashboard</li>
+                                              <li class=" text-slate-400 font-medium">Listings</li>
+                                              <li class=" text-slate-400 font-medium">Bookings</li>
+                                              <li class=" text-slate-400 font-medium">Activities</li>
+                                              <li class=" text-slate-400 font-medium">Earnings</li>
+                                              <li class=" text-slate-400 font-medium">Reviews</li>
+                                              <li class=" text-slate-400 font-medium">Settings</li>
+                                          </ul>
+                                        </li>
+                                        <li class="">
+                                            <h6 class="font-semibold text-slate-500">Master Admin<span class=" bg-emerald-500 text-white px-2 rounded-md py-1">New</span></h6>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                                <!-- dot  -->
+                                <div class=" flex items-center relative group drop-mega transition-all duration-300">
+                                    <div class="phone-drop-tab hover:text-[#584ed9]  lg:w-auto w-full">
+                                       <i class=" bx bx-dots-horizontal bx-sm dark:text-slate-300"></i>
+                                    </div>
+                                    
+                                    <ul class=" z-10 drop-mega-item active-item absolute hidden xl:block border top-16 md:top-10 w-60 left-0 right-0 mx-auto md:mx-0 md:left-0 md:right-auto bg-white dark:bg-[#0b0a12] dark:border-[#0b0a12] shadow-md rounded  px-5 py-3 space-y-3 transition-all duration-300">
+                                        <li class=" space-x-3 hover:bg-[#edecfb] px-2 rounded ">
+                                            <i class="fa-regular fa-futbol text-yellow-400"></i>
+                                            <span class="font-semibold text-slate-500 hover:text-blue-500">Support</span>
+                                        </li>
+                                        <li class=" space-x-3 hover:bg-[#edecfb] px-2 rounded border-b-2 py-2">
+                                            <i class="fa-solid fa-receipt text-red-400"></i>
+                                            <span class="font-semibold text-slate-500 hover:text-blue-500">Doucmentation</span>
+                                        </li>
+                                        <li class="space-x-3 hover:bg-[#edecfb] px-2 rounded">
+                                            <i class="fa-solid fa-toggle-off text-blue-400"></i>
+                                            <span class="font-semibold text-slate-500 hover:text-blue-500">RTL demo</span>
+                                        </li>
+                                        <li class=" space-x-3 hover:bg-[#edecfb] px-2 rounded border-b-2 py-2">
+                                            <i class="fa-solid fa-cloud-arrow-down text-emerald-500"></i>
+                                            <span class="font-semibold text-slate-500 hover:text-blue-500">Buy Booking</span>
+                                        </li>
+                                        <li class=" space-x-3 hover:bg-[#edecfb] px-2 rounded">
+                                            <i class="fa-solid fa-puzzle-piece text-orange-400"></i>
+                                            <span class="font-semibold text-slate-500 hover:text-blue-500">Components</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                           </ul>
+                      </div>
+
+                   </div>
+                  
+                   <div class=" flex items-center">
+                     <!-- sec menu list -->
+                        <ul id="list-open-slide" class="z-10  md:flex flex-col lg:flex-row xl:flex-row items-center lg:space-x-5 space-x-0 space-y-5 lg:space-y-0 absolute lg:static top-16 lg:top-auto lg:left-auto -left-full lg:w-auto dark:bg-[#222529] shadow-lg lg:shadow-none lg:py-0 py-5 w-full transition-all duration-300">
+                            <li class=" flex items-center hover:text-[#584ed9] hover:bg-[#e3e2f3]   px-2 rounded py-1">
+                                <i class=" bx bxs-buildings bx-sm dark:text-slate-200"></i>
+                                 <span class=" dark:text-slate-300">Hotel</span>
+                            </li>
+                            <li class=" flex items-center hover:text-[#584ed9] hover:bg-[#e3e2f3] px-2 rounded py-1">
+                                <i class=" bx bxs-plane-alt bx-sm dark:text-slate-200"></i>
+                                <span class=" dark:text-slate-300">Flight</span>
+                            </li>
+                            <li class=" flex items-center text-[#584ed9] bg-[#e3e2f3] dark:bg-[#2d2f3c]  px-2 rounded py-2">
+                               <i class=" bx bx-world bx-sm  dark:text-[#584ed9]"></i>
+                               <span class="  dark:text-[#584ed9]">Tour</span>
+                            </li>
+                            <li class=" flex items-center hover:text-[#584ed9] hover:bg-[#e3e2f3] px-2 rounded py-1">
+                              <i class=" bx bx-car bx-sm dark:text-slate-200"></i>
+                              <span class=" dark:text-slate-300">Cab</span>
+                           </li>
+                        </ul>
+
+                        <!-- profile-bell -->
+                        <div class="flex items-center space-x-5">
+
+                            <div id="menu-open" class=" block lg:hidden">
+                                <i class="fa-solid fa-bars text-xl dark:text-slate-200"></i>
+                            </div>
+
+                            <div id="list-open" class=" block lg:hidden">
+                                <i class='bx bxs-grid bx-sm  dark:text-slate-200'></i>
+                            </div>
+
+                            <div class="hidden md:flex relative">
+                                 <!-- noti -->
+                                <div class="noti-tab bg-[#f5f5f6] dark:bg-[#c4c4c5] w-10 h-10 flex items-center justify-center rounded-lg relative transition duration-300">
+                                  <i class=" bx bx-bell"></i>
+                                  <div class=" absolute top-0 right-0">
+                                      <div class=" w-2 h-2 bg-red-600 animate-ping rounded-full">
+
+                                      </div>
+                                  </div>
+                                <div>
+                                    
+                                </div>
+                                </div>
+                                <!-- noti message -->
+                                <div class="noti-item absolute shadow bg-white dark:bg-[#222529] w-80 right-1 top-12 px-5 py-5 space-y-5 rounded-md hidden noti-menu-tab z-10 transition-all duration-300">
+                                    <div class=" flex items-center justify-between ">
+                                        <h1 class=" text-xl font-semibold dark:text-slate-200">Notifications <span class=" text-sm text-red-600 font-medium bg-pink-100 px-2 rounded">New</span></h1>
+                                        <div>
+                                            <span class=" text-[#584ed9]">Clear all</span>
+                                        </div>
+                                    </div>
+                                    <div class=" border-b-2 w-full">
+
+                                    </div>
+                                    <div class=" bg-slate-200 dark:bg-[#2a2c31] px-3 py-3 rounded-md">
+                                         <h1 class=" text-xl font-semibold mb-3 dark:text-slate-200">New! Booking flights from New York ✈️</h1>
+                                         <p class=" text-slate-600">
+                                            Find the flexible ticket on flights around the world. Start searching today
+                                         </p>
+                                         <span class=" text-slate-600">Wednesday</span>
+                                    </div>
+                                    <div>
+                                           <h1 class="text-xl font-semibold dark:text-slate-200">Sunshine saving are here 🌞 save 30% or more on a stay</h1>
+                                           <span class="text-slate-600">15 Nov 2022</span>
+                                    </div>
+                                    <div class=" border-b-2 w-full">
+
+                                    </div>
+                                    <div class="text-center">
+                                         <span class=" text-[#584ed9]">See all incoming activity</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="relative">
+                                  <img id="img-btn" class=" w-10 h-10 rounded-lg" src="/assets/img/01.jpg" alt="">
+                                  <div id="profile-menu" class="hidden absolute right-5 bg-[#fff] dark:bg-[#222529] shadow-lg rounded-lg w-64 px-5 z-10 transition-all duration-300">
+                                     <!-- user -->
+                                        <div class=" flex items-center space-x-3 border-b-2 py-3">
+                                            <div>
+                                              <img class=" w-12 h-12 rounded-full" src="/assets/img/01.jpg" alt="">
+                                            </div>
+                                            <div class=" ">
+                                                  <h1 class="text-xl font-bold dark:text-slate-200">Lori Ferguson</h1>
+                                                  <span class="text-slate-400">example@gmail.com</span>
+                                            </div>
+                                        </div>
+                                        <!-- list -->
+                                        <ul class=" mt-3 space-y-3 border-b-2 py-3">
+                                            <li class=" flex items-center space-x-3">
+                                                 <i class=" bx bx-bookmark bx-sm dark:text-slate-500"></i>
+                                                 <span class=" text-base font-semibold text-slate-500">My Bookings</span>
+                                            </li>
+                                            <li class=" flex items-center space-x-3">
+                                                <i class=" bx bx-heart bx-sm dark:text-slate-500"></i>
+                                                <span class=" text-base font-semibold text-slate-500">My Wishlist</span>
+                                            </li>
+                                            <li class=" flex items-center space-x-3">
+                                                <i class=" bx bx-cog bx-sm dark:text-slate-500"></i>
+                                                <span class=" text-base font-semibold text-slate-500">Settings</span>
+                                            </li>
+                                            <li class=" flex items-center space-x-3">
+                                                <i class=" bx bx-info-circle bx-sm dark:text-slate-500"></i>
+                                                <span class=" text-base font-semibold text-slate-500">Help Center</span>
+                                            </li>
+                                            <li class=" flex items-center space-x-3">
+                                                <i class=" bx bx-power-off bx-sm dark:text-slate-500"></i>
+                                                <span class=" text-base font-semibold text-slate-500">Sign Out</span>
+                                            </li>
+                                        </ul>
+                                        <!-- dark mode -->
+                                        <div class=" flex items-center justify-center scale-75">
+                                            <button id="dark-switch" onclick="toggleTheme()" class="shadow w-[72px] flex items-center transition duration-200 rounded-full m-5 bg-slate-800 p-1">
+                                                <div id="dark-switch-icon" class="bg-slate-50 w-8 h-8 rounded-full transform transition duration-200 flex justify-center items-center">
+                                                    <i class="fa-regular fa-sun"></i>
+                                                </div>
+                                                <h6 id="dark-text" class="text-slate-200 dark:text-slate-900 translate-x-1">FF</h6>
+                                            </button>
+                                            
+                                            <h1 class=" text-xl font-semibold text-slate-400">Dark Mode</h1>
+                                        </div>
+                                  </div>
+                            </div>
+
+                        </div>
+
+                   </div>
+
+            </div>
+
+      </div>
+
+
+     <!-- hero section -->
+      <div class="container mx-auto px-3 xl:px-28 mb-40">
+
+            <div class="relative">
+
+                 <img class=" rounded-2xl md:h-[600px] h-[800px] w-[1600px] object-cover" src="/assets/img/02.jpg" alt="" >
+
+                 <div class=" top-10 md:top-20 absolute left-10">
+                      <div>
+                          <h1 class=" lg:text-6xl text-4xl font-bold text-slate-100 mb-5">Life Is Adventure <br> Make The Best Of It</h1>
+                          <p class=" text-slate-300 lg:max-w-xl max-w-sm">Planning for a trip? we will organize your best trip with the best destination and within the best budgets!</p>
+                      </div>
+
+                 </div>
+
+                 <div class=" absolute top-80 md:top-20 md:right-5 left-6 md:left-auto">
+                    <div class="relative bg-slate-50 px-2 py-2 rounded-2xl shadow-md">
+                        <div class=" relative">
+                          <img class="w-72 opacity-95 contrast-100 brightness-100 rounded-xl" src="/assets/img/05.jpg" alt="">
+                          <div class=" bottom-4 absolute left-5">
+                              <h1 class="text-xl font-semibold text-slate-100 ">5 Days / 4 Nights</h1>
+                          </div>
+                        </div>
+                        <div class=" mt-5 px-2 mb-3">
+                              <div class=" flex items-center justify-between mb-3">
+                                   <span class=" bg-[#edecfb] px-3 py-1 rounded-lg">Adventure</span>
+                                   <div>
+                                       <i class="fa-solid fa-star text-yellow-300"></i>
+                                       <span> 4.5 </span>
+                                   </div>
+                              </div>
+                              <div>
+                                    <h1 class=" text-xl font-bold">Maldives Sightseeing & <br> Adventure Tour </h1>
+                              </div>
+                              <div class=" flex items-center justify-between">
+                                   <h1 class=" text-lg font-semibold  text-green-500"> $385<span class=" ">/person</span></h1>
+                                   <div>
+                                      <h3 class=" line-through text-slate-600 font-semibold">$682</h3>
+                                   </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="absolute -top-5 -left-5">
+                        <img class=" w-20 h-20" src="/assets/img/05.svg" alt="">
+                        <div class=" absolute top-5 left-4">
+                            <span class=" text-3xl font-bold text-slate-100">40%</span>
+                        </div>
+                    </div>
+                 </div>
+
+                 <div class=" md:absolute static md:-bottom-16 -bottom-96 md:left-0 md:right-0 left-auto right-auto md:mx-auto xl:w-[1200px] lg:w-[900px] md:w-auto w-auto bg-white dark:bg-[#191b1d] shadow-lg md:mt-10 rounded-xl ">
+
+                      <div class=" py-5 px-5 grid md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 grid-cols-1 gap-5 items-center ">
+
+                            <!-- location -->
+                            <div class=" z-40 md:mb-5">
+                                 <div class="flex items-center space-x-1">
+                                      <i class="fa-solid fa-location-dot text-[#584ed9] text-xl"></i>
+                                      <span class=" font-semibold dark:text-slate-300">Location</span>
+                                 </div>
+                                 <div class="mt-2">
+                                     <div class=" border-b py-3 relative">
+                                          <div class="flex items-center justify-between opt-btn">
+                                              <span class="text-xl px-3 text-slate-800 dark:text-slate-200">Select Location</span>
+                                              <i class=" bx bx-chevron-down bx-sm dark:text-slate-200"></i>
+                                          </div>
+                                         <div class="hidden options  absolute top-12 border border-[#584ed9]  py-3 space-y-3 w-80 bg-white dark:bg-[#191b1d] rounded-b-md">
+                                              <input id="inputBtn" class=" w-full outline-none px-3 dark:bg-[#191b1d] dark:text-slate-200" type="text">
+                                              <div class=" border-b w-full"></div>
+                                              <div class="space-y-5 opt-div">
+
+                                              </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                            </div>
+
+                            <!-- calender -->
+                            <div class="md:mb-5">
+                              <div class=" flex items-center space-x-1">
+                                <i class='bx bx-calendar-alt bx-sm text-[#584ed9]'></i>
+                                   <span class=" font-semibold dark:text-slate-200">Date</span>
+                              </div>
+                              <div class="border-b-2 py-3 mt-2">
+                                   <input id="myID" class=" outline-none border-none dark:bg-[#191b1d] text-xl dark:text-slate-200" type="text" placeholder=" Choose a Date" readonly>
+                              </div>
+                            </div>
+
+                            <!-- tour type -->
+                            <div class="z-10 md:mb-5" >
+                              <div class="flex items-center space-x-1">
+                                   <i class='bx bx-run bx-sm text-[#584ed9]'></i>
+                                   <span class=" font-semibold dark:text-slate-200">Tour Type</span>
+                              </div>
+                              <div class=" mt-2">
+                                <div class=" border-b py-3 relative">
+                                     <div class="flex items-center justify-between tour-btn">
+                                         <span class="text-xl px-3 text-slate-800 dark:text-slate-200">Select Type</span>
+                                         <i class=" bx bx-chevron-down bx-sm dark:text-slate-200"></i>
+                                     </div>
+                                    <div class="hidden tour-options absolute top-12 border border-[#584ed9]  py-3 space-y-3 w-80 bg-white dark:bg-[#191b1d] rounded-b-md">
+                                         <input id="input-tour-btn" class=" w-full  outline-none px-3 dark:bg-[#191b1d] dark:text-slate-200" type="text">
+                                         <div class=" border-b w-full"></div>
+                                         <div class="space-y-5 tour-list-div">
+
+                                         </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--tour btn-->
+                            <div class=" md:col-span-3 lg:col-span-1">
+                                 <button class="w-full px-10 py-3 rounded-2xl bg-[#0b0a12] text-slate-100 font-semibold text-lg">Take a Tour</button>
+                            </div>
+                            
+                      </div>
+
+                 </div>
+
+            </div>
+
+      </div>
+
+      <div id="native"  class="container mx-auto px-3 xl:px-28 mb-40 ">
+            <div class=" flex flex-col md:flex-row md:items-center md:space-x-10 space-x-0 space-y-4 md:space-y-0">
+                  <div class=" mb-3 md:mb-0">
+                      <h1 class=" text-2xl font-bold dark:text-slate-200">Recent <br> Searches</h1>
+                  </div>
+                  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-y-3 gap-x-3">
+
+                        <div class=" flex items-center justify-between dark:bg-[#2a2c31] bg-[#f5f5f6] px-2 py-2 rounded-lg">
+                              <span class="text-slate-600 text-sm dark:text-[#90888e]">Taman Sari</span>
+                              <i class='bx bx-x bx-sm text-slate-600 dark:text-[#90888e] del-icon'></i>
+                        </div>
+
+                        <div class=" flex items-center justify-between dark:bg-[#2a2c31] bg-[#f5f5f6] px-2 py-2 rounded-lg">
+                            <span class="text-slate-600 text-sm dark:text-[#90888e]">The Grand Palace</span>
+                            <i class='bx bx-x bx-sm text-slate-600 dark:text-[#90888e] del-icon'></i>
+                        </div>
+
+                        <div class=" flex items-center justify-between dark:bg-[#2a2c31] bg-[#f5f5f6] px-2 py-2 rounded-lg">
+                            <span class="text-slate-600 text-sm dark:text-[#90888e]">Glacier National Park</span>
+                            <i class='bx bx-x bx-sm text-slate-600 dark:text-[#90888e] del-icon'></i>
+                        </div>
+                        <div class=" flex items-center justify-between dark:bg-[#2a2c31] bg-[#f5f5f6] px-2 py-2 rounded-lg">
+                            <span class="text-slate-600 text-sm dark:text-[#90888e]">Machu Picchu</span>
+                            <i class='bx bx-x bx-sm text-slate-600 dark:text-[#90888e] del-icon'></i>
+                        </div>
+                        <div class=" flex items-center justify-between dark:bg-[#2a2c31] bg-[#f5f5f6] px-2 py-2 rounded-lg">
+                            <span class="text-slate-600 text-sm dark:text-[#90888e]">Machu Picchu</span>
+                            <i class='bx bx-x bx-sm text-slate-600 dark:text-[#90888e] del-icon'></i>
+                        </div>
+                        <div class=" flex items-center justify-between dark:bg-[#2a2c31] bg-[#f5f5f6] px-2 py-2 rounded-lg">
+                            <span class="text-slate-600 text-sm dark:text-[#90888e]">Prambanna</span>
+                            <i class='bx bx-x bx-sm text-slate-600 dark:text-[#90888e] del-icon'></i>
+                        </div>
+                        <div class=" flex items-center justify-between dark:bg-[#2a2c31] bg-[#f5f5f6] px-2 py-2 rounded-lg">
+                          <span class="text-slate-600 text-sm dark:text-[#90888e]">Batu Gong</span>
+                          <i class='bx bx-x bx-sm text-slate-600 dark:text-[#90888e] del-icon'></i>
+                        </div>
+                        <div class=" flex items-center justify-between dark:bg-[#2a2c31] bg-[#f5f5f6] px-2 py-2 rounded-lg">
+                            <span class="text-slate-600 text-sm dark:text-[#90888e]">Barobadur Temple</span>
+                            <i class='bx bx-x bx-sm text-slate-600 dark:text-[#90888e] del-icon'></i>
+                        </div>
+                        <div class=" flex items-center justify-between dark:bg-[#2a2c31] bg-[#f5f5f6] px-2 py-2 rounded-lg">
+                            <span class="text-slate-600 text-sm dark:text-[#90888e]">Great Barrier Reef</span>
+                            <i class='bx bx-x bx-sm text-slate-600 dark:text-[#90888e] del-icon'></i>
+                        </div>
+                        <div class=" flex items-center justify-between dark:bg-[#2a2c31] bg-[#f5f5f6] px-2 py-2 rounded-lg">
+                            <span class="text-slate-600 text-sm dark:text-[#90888e]">Argentine Patagonia</span>
+                            <i class='bx bx-x bx-sm text-slate-600 dark:text-[#90888e] del-icon'></i>
+                        </div>
+                        <div class="  flex items-center justify-center dark:bg-[#2a2c31] bg-[#edecfb]  rounded-md">
+                            <span class=" text-[#6156d9] py-3" id="clear-all">Clear All</span>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+      <!-- card  -->
+      <div class="container mx-auto px-3 xl:px-28 mb-40">
+          <div class=" mb-14">
+                <h1 class=" text-5xl font-bold text-center dark:text-slate-200">Our Best Packages</h1>
+          </div>
+          <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                <!-- adeventure card -->
+                <div class="group">
+                      <div class=" relative">
+                        <div class=" overflow-hidden rounded-2xl ">
+                          <img src="/assets/img/adventur.jpg" class="h-[350px] rounded-xl group-hover:scale-105 transition duration-300 ease-in-out" alt="Louvre" />
+                        </div>
+                        <div class="absolute top-8 left-5 flex items-center space-x-24">
+                            <span class=" text-slate-100 bg-slate-900 px-2 rounded-md py-1">Adventure</span>
+                            <div class=" flex items-center space-x-3 bg-slate-50 px-2 rounded-lg">
+                              <i class="fa-solid fa-star text-yellow-500"></i>
+                            <span>4.3</span>
+                            </div>
+                        </div>
+                        <div class=" absolute bottom-6 left-5">
+                            <span class="bg-white px-3 py-1 rounded-lg">6 Days / 5 Nights</span>
+                        </div>
+                        
+                      </div>
+                      <div class="mt-3">
+                          <h1 class="text-2xl font-bold mb-2 group-hover:text-[#584ed9] dark:text-slate-200 transition duration-300">Lombok, Indonesia</h1>
+                          <div class="flex items-center space-x-5">
+                              <h1 class=" text-2xl font-bold text-emerald-600">$1389</h1>
+                              <span class=" text-sm text-slate-600 dark:text-[#90888e]">Starting Price</span>
+                          </div>
+                      </div>
+                </div>
+
+                <!-- history -->
+                <div class="group">
+                    <div class=" relative">
+                      <div class=" overflow-hidden rounded-2xl">
+                        <img src="/assets/img/history.jpg" class="h-[350px] rounded-xl group-hover:scale-105 transition duration-300 ease-in-out" alt="Louvre" />
+                      </div>
+                      <div class="absolute top-8 left-5 flex items-center space-x-24">
+                          <span class=" text-slate-100 bg-slate-900 px-2 rounded-md py-1">History</span>
+                          <div class=" flex items-center space-x-3 bg-slate-50 px-2 rounded-lg">
+                            <i class="fa-solid fa-star text-yellow-500"></i>
+                          <span>4.5</span>
+                          </div>
+                      </div>
+                      <div class=" absolute bottom-6 left-5">
+                          <span class="bg-white px-3 py-1 rounded-lg">8 Days / 7 Nights</span>
+                      </div>
+                      
+                    </div>
+                    <div class="mt-3">
+                        <h1 class="text-2xl font-bold mb-2 group-hover:text-[#584ed9] dark:text-slate-200 transition duration-300">Notherns Lights Escape</h1>
+                        <div class="flex items-center space-x-5">
+                            <h1 class=" text-2xl font-bold text-emerald-600">$2569</h1>
+                            <span class=" text-sm text-slate-600 dark:text-[#90888e]">Starting Price</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- desert -->
+                <div class="group">
+                    <div class=" relative">
+                      <div class=" overflow-hidden rounded-2xl">
+                        <img src="/assets/img/desert.jpg" class="h-[350px] rounded-xl group-hover:scale-105 transition duration-300 ease-in-out" alt="Louvre" />
+                      </div>
+                      <div class="absolute top-8 left-5 flex items-center space-x-24">
+                          <span class=" text-slate-100 bg-slate-900 px-2 rounded-md py-1">Desert</span>
+                          <div class=" flex items-center space-x-3 bg-slate-50 px-2 rounded-lg">
+                            <i class="fa-solid fa-star text-yellow-500"></i>
+                          <span>4.2</span>
+                          </div>
+                      </div>
+                      <div class=" absolute bottom-6 left-5">
+                          <span class="bg-white px-3 py-1 rounded-lg">9 Days / 8 Nights</span>
+                      </div>
+                      
+                    </div>
+                    <div class="mt-3">
+                        <h1 class="text-2xl font-bold mb-2 group-hover:text-[#584ed9] dark:text-slate-200 transition duration-300">Essentail Egypt</h1>
+                        <div class="flex items-center space-x-5">
+                            <h1 class=" text-2xl font-bold text-emerald-600">$1885</h1>
+                            <span class=" text-sm text-slate-600 dark:text-[#90888e]">Starting Price</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- desert -->
+                <div class="group">
+                    <div class=" relative">
+                      <div class=" overflow-hidden rounded-2xl">
+                        <img src="/assets/img/beach.jpg" class="h-[350px] rounded-xl group-hover:scale-105 transition duration-300 ease-in-out" alt="Louvre" />
+                      </div>
+                      <div class="absolute top-8 left-5 flex items-center space-x-24">
+                          <span class=" text-slate-100 bg-slate-900 px-2 rounded-md py-1">Beach</span>
+                          <div class=" flex items-center space-x-3 bg-slate-50 px-2 rounded-lg">
+                            <i class="fa-solid fa-star text-yellow-500"></i>
+                          <span>4.6</span>
+                          </div>
+                      </div>
+                      <div class=" absolute bottom-6 left-5">
+                          <span class="bg-white px-3 py-1 rounded-lg">9 Days / 8 Nights</span>
+                      </div>
+                      
+                    </div>
+                    <div class="mt-3">
+                        <h1 class="text-2xl font-bold mb-2 group-hover:text-[#584ed9] dark:text-slate-200 transition duration-300">Phi Phi Islands</h1>
+                        <div class="flex items-center space-x-5">
+                            <h1 class=" text-2xl font-bold text-emerald-600">$3585</h1>
+                            <span class=" text-sm text-slate-600 dark:text-[#90888e]">Starting Price</span>
+                        </div>
+                    </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- subscribe -->
+      <div class="container mx-auto px-3 xl:px-28 relative mb-40">
+            <div class=" bg-[#f5f5f6] dark:bg-[#2a2c31] py-20 rounded-xl px-3">
+                <div>
+                  <h1 class=" md:text-6xl text-4xl font-bold text-center max-w-xl mx-auto mb-8 dark:text-slate-200">Subscribe And Get a Special Discount</h1>
+                  <p class=" text-slate-600 dark:text-[#90888e] max-w-2xl text-center mx-auto">Speedily say has suitable disposal add boy. On forth doubt miles of child. Exercise joy man children rejoiced.</p>
+                </div>
+                <div class=" mt-10 border-gray-600 mx-auto flex items-center bg-white py-2 px-3 md:w-[600px] rounded-lg dark:bg-[#222529]">
+                    <input class=" w-full  outline-none bg-[#ffffff] dark:bg-[#222529] dark:text-slate-200" type="text" name="" id="" placeholder=" Enter your email">
+                    <button class=" bg-[#0b0a12] text-slate-100 px-5 py-2 rounded-md">Subscribe</button>
+                </div>
+            </div>
+
+            <div class="hidden md:block absolute lg:-bottom-10 md:-bottom-20 xl:left-10 lg:-left-10 z-10">
+              <svg class="fill-blue" width="148px" height="133px">
+                <path style="fill: #5143d9;" d="M145.013,6.751 C143.905,6.733 143.022,5.819 143.041,4.712 C143.060,3.604 143.973,2.721 145.080,2.740 C146.188,2.759 147.071,3.672 147.052,4.779 C147.033,5.887 146.121,6.770 145.013,6.751 ZM144.552,34.160 C145.660,34.179 146.543,35.092 146.524,36.199 C146.506,37.307 145.592,38.190 144.485,38.171 C143.377,38.153 142.495,37.240 142.513,36.132 C142.532,35.024 143.445,34.141 144.552,34.160 ZM144.024,65.580 C145.132,65.599 146.015,66.512 145.996,67.619 C145.978,68.727 145.065,69.610 143.957,69.591 C142.849,69.572 141.966,68.659 141.985,67.552 C142.004,66.444 142.917,65.561 144.024,65.580 ZM143.496,97.000 C144.604,97.019 145.487,97.932 145.468,99.039 C145.450,100.147 144.537,101.030 143.429,101.011 C142.321,100.992 141.438,100.079 141.457,98.972 C141.476,97.864 142.389,96.981 143.496,97.000 ZM142.968,128.420 C144.076,128.439 144.959,129.351 144.940,130.460 C144.921,131.567 144.008,132.450 142.901,132.431 C141.793,132.413 140.910,131.500 140.929,130.392 C140.948,129.284 141.861,128.401 142.968,128.420 ZM116.936,6.279 C115.828,6.261 114.945,5.348 114.964,4.240 C114.982,3.132 115.895,2.250 117.003,2.268 C118.111,2.287 118.993,3.200 118.975,4.308 C118.956,5.415 118.043,6.298 116.936,6.279 ZM116.475,33.688 C117.582,33.707 118.465,34.620 118.447,35.727 C118.428,36.835 117.515,37.718 116.407,37.699 C115.300,37.681 114.417,36.768 114.436,35.660 C114.454,34.552 115.367,33.670 116.475,33.688 ZM115.947,65.108 C117.055,65.127 117.937,66.040 117.919,67.147 C117.900,68.255 116.987,69.138 115.880,69.119 C114.772,69.101 113.889,68.188 113.908,67.080 C113.926,65.973 114.839,65.090 115.947,65.108 ZM115.419,96.528 C116.527,96.547 117.409,97.460 117.391,98.567 C117.372,99.675 116.459,100.558 115.352,100.539 C114.244,100.521 113.361,99.608 113.380,98.500 C113.398,97.392 114.311,96.510 115.419,96.528 ZM114.891,127.948 C115.998,127.967 116.881,128.880 116.863,129.987 C116.844,131.095 115.931,131.978 114.823,131.959 C113.716,131.941 112.833,131.028 112.852,129.920 C112.870,128.812 113.783,127.930 114.891,127.948 ZM88.858,5.807 C87.750,5.789 86.868,4.876 86.886,3.768 C86.905,2.660 87.818,1.777 88.925,1.796 C90.033,1.815 90.916,2.728 90.897,3.835 C90.879,4.943 89.966,5.826 88.858,5.807 ZM88.397,33.216 C89.505,33.235 90.388,34.148 90.369,35.256 C90.351,36.363 89.438,37.246 88.330,37.227 C87.222,37.209 86.340,36.296 86.358,35.188 C86.377,34.081 87.290,33.198 88.397,33.216 ZM87.869,64.636 C88.977,64.655 89.860,65.568 89.841,66.676 C89.823,67.783 88.910,68.666 87.802,68.648 C86.694,68.629 85.812,67.716 85.830,66.608 C85.849,65.501 86.762,64.618 87.869,64.636 ZM87.341,96.056 C88.449,96.075 89.332,96.988 89.313,98.095 C89.295,99.203 88.382,100.086 87.274,100.067 C86.166,100.049 85.284,99.136 85.302,98.028 C85.321,96.921 86.234,96.038 87.341,96.056 ZM86.813,127.476 C87.921,127.495 88.804,128.408 88.785,129.516 C88.767,130.623 87.854,131.506 86.746,131.488 C85.638,131.469 84.756,130.556 84.774,129.448 C84.793,128.341 85.706,127.458 86.813,127.476 ZM60.781,5.336 C59.673,5.317 58.790,4.404 58.809,3.296 C58.827,2.189 59.740,1.306 60.848,1.324 C61.956,1.343 62.838,2.256 62.820,3.364 C62.801,4.471 61.888,5.354 60.781,5.336 ZM60.320,32.745 C61.428,32.763 62.310,33.676 62.292,34.784 C62.273,35.891 61.360,36.774 60.253,36.756 C59.145,36.737 58.262,35.824 58.281,34.717 C58.299,33.609 59.213,32.726 60.320,32.745 ZM59.792,64.165 C60.900,64.183 61.783,65.096 61.764,66.204 C61.745,67.311 60.832,68.194 59.725,68.175 C58.617,68.157 57.734,67.244 57.753,66.136 C57.771,65.029 58.684,64.146 59.792,64.165 ZM59.264,95.584 C60.372,95.603 61.255,96.516 61.236,97.624 C61.217,98.731 60.304,99.614 59.197,99.596 C58.089,99.577 57.206,98.664 57.225,97.556 C57.243,96.449 58.156,95.566 59.264,95.584 ZM58.736,127.005 C59.843,127.023 60.726,127.936 60.708,129.044 C60.689,130.151 59.776,131.034 58.669,131.016 C57.561,130.997 56.678,130.084 56.697,128.977 C56.715,127.869 57.628,126.986 58.736,127.005 ZM32.703,4.864 C31.595,4.845 30.713,3.932 30.731,2.825 C30.750,1.717 31.663,0.834 32.771,0.853 C33.878,0.871 34.761,1.784 34.742,2.892 C34.724,4.000 33.811,4.882 32.703,4.864 ZM32.243,32.273 C33.350,32.291 34.233,33.205 34.214,34.312 C34.196,35.420 33.283,36.303 32.175,36.284 C31.068,36.265 30.185,35.352 30.203,34.245 C30.222,33.137 31.135,32.254 32.243,32.273 ZM31.715,63.693 C32.822,63.712 33.705,64.624 33.686,65.732 C33.668,66.839 32.755,67.722 31.647,67.704 C30.539,67.685 29.657,66.772 29.675,65.665 C29.694,64.557 30.607,63.674 31.715,63.693 ZM31.187,95.113 C32.294,95.131 33.177,96.044 33.158,97.152 C33.140,98.260 32.227,99.142 31.119,99.124 C30.011,99.105 29.129,98.192 29.147,97.084 C29.166,95.977 30.079,95.094 31.187,95.113 ZM30.659,126.533 C31.766,126.551 32.649,127.465 32.630,128.572 C32.612,129.680 31.699,130.563 30.591,130.544 C29.484,130.525 28.601,129.612 28.619,128.505 C28.638,127.397 29.551,126.514 30.659,126.533 ZM4.626,4.392 C3.518,4.373 2.635,3.460 2.654,2.353 C2.672,1.245 3.585,0.362 4.693,0.381 C5.801,0.399 6.684,1.313 6.665,2.420 C6.646,3.528 5.733,4.411 4.626,4.392 ZM4.165,31.801 C5.273,31.820 6.156,32.732 6.137,33.840 C6.118,34.948 5.205,35.831 4.098,35.812 C2.990,35.793 2.107,34.880 2.126,33.773 C2.145,32.665 3.058,31.782 4.165,31.801 ZM3.637,63.221 C4.745,63.239 5.628,64.152 5.609,65.260 C5.590,66.368 4.677,67.251 3.570,67.232 C2.462,67.213 1.579,66.300 1.598,65.193 C1.616,64.085 2.529,63.202 3.637,63.221 ZM3.109,94.641 C4.217,94.659 5.100,95.573 5.081,96.680 C5.062,97.788 4.149,98.671 3.042,98.652 C1.934,98.633 1.051,97.720 1.070,96.613 C1.089,95.505 2.001,94.622 3.109,94.641 ZM2.581,126.061 C3.689,126.080 4.572,126.992 4.553,128.100 C4.534,129.208 3.621,130.091 2.514,130.072 C1.406,130.053 0.523,129.140 0.542,128.033 C0.561,126.925 1.474,126.042 2.581,126.061 Z"></path>
+              </svg>
+            </div>
+
+            <div class="hidden md:block absolute top-16 xl:right-28 md:right-2">
+              <svg class="fill-primary" width="141px" height="23.9px" viewBox="0 0 141 23.9">
+                <polygon style="fill: #5143d9;" points="1.8,14.1 21.5,23.9 41.4,14 61.3,23.9 81.2,14 101.1,23.9 121,14 139,23 139,20.2 121,11.2 101.1,21.1 81.2,11.2 61.3,21.1 41.4,11.2 21.5,21.1 1.8,11.4 "></polygon>
+                <polygon style="fill: #5143d9;" points="1.8,2.9 21.5,12.7 41.4,2.8 61.3,12.7 81.2,2.8 101.1,12.7 121,2.8 139,11.7 139,9 121,0 101.1,9.9 81.2,0 61.3,9.9 41.4,0 21.5,9.9 1.8,0.1"></polygon>
+              </svg>
+            </div>
+      </div>
+
+      <!-- Categories -->
+      <div class="container mx-auto px-3 xl:px-28 mb-40">
+
+          <div class=" mb-10">
+              <h1 class=" text-6xl font-bold text-center dark:text-slate-200">Top Categories</h1>
+          </div>
+
+          <div class=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-y-10 gap-x-5">
+
+                <!-- beach -->
+                <div class=" flex flex-col md:flex-row md:items-center items-start space-x-0  md:space-x-5 space-y-3 md:space-y-0 group">
+                    <img class=" md:w-32 md:h-32 w-auto h-auto rounded-xl object-cover" src="/assets/img/beach1.jpg" alt="">
+                    <div>
+                        <h1 class=" text-2xl font-bold group-hover:text-[#5143d9]  transition duration-300 dark:text-slate-200">Beach</h1>
+                        <span class=" text-slate-400 dark:text-[#90888e]">4568 Places</span>
+                    </div>
+                </div>
+
+                <!-- heritage -->
+                <div class=" flex flex-col md:flex-row md:items-center items-start space-x-0  md:space-x-5 space-y-3 md:space-y-0 group">
+                    <img class="  md:w-32 md:h-32 w-auto h-auto rounded-xl object-cover" src="/assets/img/heritage.jpg" alt="">
+                    <div>
+                        <h1 class=" text-2xl font-bold group-hover:text-[#5143d9] dark:text-slate-200 transition duration-300">Heritage</h1>
+                        <span class=" text-slate-400 dark:text-[#90888e]">2,845 Places</span>
+                    </div>
+                </div>
+
+                <!--desert-->
+                <div class=" flex flex-col md:flex-row md:items-center items-start space-x-0  md:space-x-5 space-y-3 md:space-y-0 group">
+                    <img class=" md:w-32 md:h-32 w-auto h-auto rounded-xl object-cover" src="/assets/img/desert1.jpg" alt="">
+                    <div>
+                        <h1 class=" text-2xl font-bold group-hover:text-[#5143d9] dark:text-slate-200 transition duration-300">Desert</h1>
+                        <span class=" text-slate-400 dark:text-[#90888e]">1,587 Places</span>
+                    </div>
+                </div>
+
+               <!--tower-->
+               <div class="flex flex-col md:flex-row md:items-center items-start space-x-0  md:space-x-5 space-y-3 md:space-y-0 group">
+                  <img class="md:w-32 md:h-32 w-auto h-auto rounded-xl object-cover" src="/assets/img/tower.jpg" alt="">
+                  <div>
+                      <h1 class=" text-2xl font-bold group-hover:text-[#5143d9] dark:text-slate-200 transition duration-300">Tower</h1>
+                      <span class=" text-slate-400 dark:text-[#90888e]">986 Places</span>
+                  </div>
+               </div>
+
+                <!--mountain-->
+                <div class=" flex flex-col md:flex-row md:items-center items-start space-x-0  md:space-x-5 space-y-3 md:space-y-0 group">
+                  <img class=" md:w-32 md:h-32 w-auto h-auto rounded-xl object-cover" src="/assets/img/mountain.jpg" alt="">
+                  <div>
+                      <h1 class=" text-2xl font-bold group-hover:text-[#5143d9] dark:text-slate-200 transition duration-300">Mountain</h1>
+                      <span class=" text-slate-400 dark:text-[#90888e]">786 Places</span>
+                  </div>
+                </div>
+
+               <!--safari-->
+               <div class=" flex flex-col md:flex-row md:items-center items-start space-x-0  md:space-x-5 space-y-3 md:space-y-0  group">
+                <img class="md:w-32 md:h-32 w-auto h-auto rounded-xl object-cover" src="/assets/img/safari.jpg" alt="">
+                <div>
+                    <h1 class=" text-2xl font-bold group-hover:text-[#5143d9] dark:text-slate-200 transition duration-300">Safari</h1>
+                    <span class=" text-slate-400 dark:text-[#90888e]">586 Places</span>
+                </div>
+               </div>
+
+               <!--temple-->
+               <div class=" flex flex-col md:flex-row md:items-center items-start space-x-0  md:space-x-5 space-y-3 md:space-y-0  group">
+                  <img class=" md:w-32 md:h-32 w-auto h-auto rounded-xl object-cover" src="/assets/img/temple.jpg" alt="">
+                  <div>
+                      <h1 class=" text-2xl font-bold group-hover:text-[#5143d9] dark:text-slate-200 transition duration-300">Temple</h1>
+                      <span class=" text-slate-400 dark:text-[#90888e]">256 Places</span>
+                  </div>
+               </div>
+
+               <!--festival-->
+               <div class="flex flex-col md:flex-row md:items-center items-start space-x-0  md:space-x-5 space-y-3 md:space-y-0  group">
+                  <img class=" md:w-32 md:h-32 w-auto h-auto rounded-xl object-cover" src="/assets/img/festival.jpg" alt="">
+                  <div>
+                      <h1 class=" text-2xl font-bold group-hover:text-[#5143d9] dark:text-slate-200 transition duration-300">Festival</h1>
+                      <span class=" text-slate-400 dark:text-[#90888e]">654 Places</span>
+                  </div>
+               </div>
+
+          </div>
+
+      </div>
+
+      <div class="container mx-auto px-3 xl:px-28 mb-40">
+            <div class=" flex flex-col md:flex-row items-center md:space-x-10 space-x-0 space-y-5">
+              
+                  <div>
+                       <h1 class=" lg:text-6xl md:text-4xl text-6xl font-bold dark:text-slate-200 max-w-sm mb-10">Discover the best places to visit🔥</h1>
+                        <div class=" flex items-center relative mb-10">
+                          <img class=" w-14 h-14 rounded-full" src="/assets/img/01.jpg" alt="">
+                          <div class="flex items-center">
+                              <img class=" w-14 h-14 rounded-full absolute left-10" src="/assets/img/oldman.jpg" alt="">
+                              <img class=" w-14 h-14 rounded-full absolute left-20" src="/assets/img/youngman1.jpg" alt="">
+                              <img class=" w-14 h-14 rounded-full absolute left-28" src="/assets/img/youngman2.jpg" alt="">
+                              <div class="w-14 h-14 rounded-full absolute left-36 bg-[#0b0a12] flex items-center justify-center">
+                                  <span class="  text-slate-200 ">16+</span>
+                              </div>
+                          </div>
+                        </div>
+                        <button class=" bg-[#edecfb] text-[#584ed9] px-8 py-3 font-semibold rounded-lg hover:bg-[#584ed9] hover:text-slate-200 transition duration-300">Explores places <i class="fa-solid fa-arrow-right"></i></button>
+                  </div>
+                  
+                  <div>
+                    <img class="  w-96 lg:h-[351px] md:h-auto h-[351px] mb-5 object-cover rounded-xl" src="/assets/img/boat.jpg" alt="">
+                    <div class=" flex items-center space-x-3">
+                      <div>
+                         <a href="/assets/img/slideman.jpg" class="glightbox3" data-gallery="gallery1">
+                        <img class=" w-32 h-32 rounded-xl" src="/assets/img/slideman.jpg" alt="">
+                      </a>
+                      </div>
+                      <div>
+                          <p class="mb-3 text-base md:text-xs lg:text-base dark:text-[#90888e]">Farther-related bed and<br> passage comfort civilly.</p>
+                          <h3 class="text-xl font-bold dark:text-slate-200">Louis Ferguson</h3>
+                      </div>
+                    </div>
+                  
+                  </div>
+
+                  <div class=" space-y-5">
+                        
+                        
+                    <a href="https://youtu.be/tXHviS-4ygo" class="glightbox3" data-gallery="gallery1">
+                        <div class=" relative overflow-hidden bg-no-repeat group">
+                          <img class=" h-60 lg:h-60 md:h-40 mb-5 object-cover rounded-xl" src="/assets/img/swin.jpg" alt="">
+                          <div class="top-0 bottom-0 left-0 right-0 w-full h-60 absolute bg-white rounded-xl opacity-0 group-hover:opacity-10 transition duration-300">
+                                    
+                          </div>
+                          <a href="https://youtu.be/tXHviS-4ygo" class=" ease-in-out opacity-0 group-hover:opacity-100 transition duration-300">
+                              <div class=" absolute top-0 bottom-0 left-0 right-0 mx-auto flex items-center justify-center">
+                                <div class="  mx-auto bg-white w-14 h-14 rounded-full flex items-center justify-center ">
+                                  <i class="fa-solid fa-play text-lg text-red-600"></i>
+                                </div>
+                              </div>
+                          </a>
+                        </div>
+                    </a>
+                    <!-- Gallery -->
+                    <a href="/assets/img/dancei.jpg" class="glightbox3" data-gallery="gallery1">
+                      
+                      <div class=" relative overflow-hidden bg-no-repeat group">
+                        <img class=" h-60 lg:h-60 md:h-40 object-cover rounded-xl" src="/assets/img/dancei.jpg" alt="">
+                        <div class="top-0 bottom-0 left-0 right-0 w-full h-60 absolute bg-white rounded-xl opacity-0 group-hover:opacity-10 transition duration-300">
+                                  
+                        </div>
+                        <a href="/assets/img/dancei.jpg" class=" ease-in-out opacity-0 group-hover:opacity-100 transition duration-300">
+                            <div class=" absolute top-0 bottom-0 left-0 right-0 mx-auto flex items-center justify-center">
+                              <div class="  mx-auto bg-slate-900 w-10 h-10 rounded-md flex items-center justify-center ">
+                                <i class="fa-solid fa-expand text-lg text-white"></i>
+                              </div>
+                            </div>
+                        </a>
+                      </div>
+                    </a>
+                    
+                  </div>
+            </div>
+      </div>
+
+      <footer class="container mx-auto px-3 xl:px-28 mb-10">
+
+          <div class="  bg-[#f5f5f6] dark:bg-[#2a2c31] px-5 md:px-10 rounded-xl">
+
+                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 justify-between py-10">
+                  <div>
+                      <img class=" w-40 mb-5" src="/assets/img/logo.svg" alt="">
+                      <label class=" text-slate-500" for="">Subscribe to Our Newsletter</label>
+
+                      <div class="mt-2 border-gray-600 flex items-center bg-white py-2 px-3 rounded-lg">
+                        <input class=" w-full  outline-none bg-[#ffffff]" type="text" name="" id="" placeholder=" Enter your email">
+                        <button class=" bg-[#0b0a12] text-slate-100 px-5 py-2 rounded-md"><i class="fa-solid fa-paper-plane"></i></button>
+                      </div>
+                  </div>
+                  <div class=" flex space-x-28">
+                      <ul class=" space-y-3">
+                        <span class=" text-2xl font-bold dark:text-slate-200">Page</span>
+                        <li class=" hover:text-[#584ed9] transition duration-300 text-slate-500">BLog</li>
+                        <li class=" hover:text-[#584ed9] transition duration-300 text-slate-500">About us</li>
+                        <li class=" hover:text-[#584ed9] transition duration-300 text-slate-500">Contact Us</li>
+                        <li class=" hover:text-[#584ed9] transition duration-300 text-slate-500">Service</li>
+                      </ul>
+                      <ul class=" space-y-3">
+                        <span class=" text-2xl font-bold dark:text-slate-200">Links</span>
+                        <li class="hover:text-[#584ed9] text-slate-500">Sign in</li>
+                        <li class="hover:text-[#584ed9] text-slate-500">Sign up</li>
+                        <li class="hover:text-[#584ed9] text-slate-500">Privacy Policy</li>
+                        <li class="hover:text-[#584ed9] text-slate-500">Terms</li>
+                        <li class="hover:text-[#584ed9] text-slate-500">Cookie</li>
+                        <li class="hover:text-[#584ed9] text-slate-500">Support</li>
+                      </ul>
+                  </div>
+                 
+                </div>
+
+                <div class=" border-b-2 mb-5">
+
+                </div>
+
+                <div class=" flex flex-col md:flex-row space-y-3 md:space-y-0 items-center justify-between py-10">
+                    <span class=" text-slate-500 text-sm">Copyrights ©2022 Booking. All rights reserved.</span>
+                    <div class=" space-x-3">
+                      <i class="fa-brands fa-facebook text-slate-500 hover:text-[#584ed9] transition duration-300"></i>
+                      <i class="fa-brands fa-twitter  text-slate-500 hover:text-[#584ed9] transition duration-300"></i>
+                      <i class="fa-brands fa-instagram  text-slate-500 hover:text-[#584ed9] transition duration-300"></i>
+                      <i class="fa-brands fa-linkedin  text-slate-500 hover:text-[#584ed9] transition duration-300"></i>
+                      <i class="fa-brands fa-github  text-slate-500 hover:text-[#584ed9] transition duration-300"></i>
+                    </div>
+                </div>
+
+          </div>
+
+      </footer>
+
+      <script src="/src/main.js"></script>       
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>                                   
+      <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+      <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+      <script>
+
+       
+            flatpickr("#myID", {
+              altInput: true,
+              // altFormat: "F j, Y",
+              // dateFormat: "Y-m-d",
+              
+            });
+            const navAni = document.querySelector('.nav-ani')
+            const megaFix = document.querySelectorAll('.mega-fix')
+           
+                        var waypoint = new Waypoint({
+                        element: document.getElementById('native'),
+                        handler: function(direction) {
+                        if(direction === 'down'){
+                                navAni.classList.add('fixed','w-full','animate__fadeInDown','shadow-xl','top-0','dark:bg-[#222529]')                                                            
+                        }
+
+                        else
+                        {
+                                navAni.classList.remove('fixed','w-full','animate__fadeInDown','shadow-xl','top-0','dark:bg-[#222529]')
+                        }
+                        },
+                        offset: '20%'
+                        });    
+
+      </script>
+</body>
+</html>
