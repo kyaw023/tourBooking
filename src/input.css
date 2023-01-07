@@ -35,3 +35,7 @@
 .active .drop-active-two{
     @apply block
 }
+
+.dropdown-active{
+    @apply translate-x-0
+}

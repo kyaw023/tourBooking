@@ -91,7 +91,7 @@ const darkSwitchIcon = document.querySelector("#dark-switch-icon");
           let menuOpenSlide = document.querySelector('#menu-open-slide');
           let icon = document.querySelector('.fa-bars')
            menuOpen.addEventListener('click',()=>{
-               menuOpenSlide.classList.add('active')
+               menuOpenSlide.classList.add('dropdown-active')
                
                if(icon.classList.contains('fa-bars'))
                {
@@ -105,7 +105,7 @@ const darkSwitchIcon = document.querySelector("#dark-switch-icon");
                menuOpen.addEventListener('click',()=>{
                    if(icon.classList.contains('fa-bars'))
                    {
-                      menuOpenSlide.classList.remove('active')
+                      menuOpenSlide.classList.remove('dropdown-active')
                    }
                })
            })
